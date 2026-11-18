@@ -1,0 +1,3 @@
+# golf_pga
+Top 3 du tournoi en cours (PGA Tour, DP World Tour ou LPGA) via l'API publique ESPN, sans clé.
+Variables : {{golf_pga.p1_line}}, {{golf_pga.p2_line}}, {{golf_pga.p3_line}}, {{golf_pga.tournament}}, {{golf_pga.round}}…

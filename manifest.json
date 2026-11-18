@@ -1,0 +1,37 @@
+{
+  "id": "golf_pga",
+  "name": "Golf – classement",
+  "version": "1.0.0",
+  "description": "Top du classement du tournoi en cours (PGA Tour par défaut) via l'API publique ESPN, sans clé.",
+  "author": "Max",
+  "icon": "flag",
+  "category": "sports",
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "tour": {
+        "type": "string", "title": "Circuit", "default": "pga",
+        "enum": ["pga", "eur", "lpga"],
+        "enumNames": ["PGA Tour", "DP World Tour", "LPGA"]
+      },
+      "board_cols": { "type": "integer", "title": "Colonnes du board", "default": 15, "minimum": 15, "maximum": 22 },
+      "refresh_seconds": { "type": "integer", "title": "Rafraîchissement (s)", "default": 900, "minimum": 300, "maximum": 3600 }
+    }
+  },
+  "variables": {
+    "simple": [
+      "tournament", "round", "state",
+      "p1_pos", "p1_name", "p1_score", "p1_line",
+      "p2_pos", "p2_name", "p2_score", "p2_line",
+      "p3_pos", "p3_name", "p3_score", "p3_line",
+      "p4_line"
+    ]
+  },
+  "max_lengths": {
+    "tournament": 22, "round": 15, "state": 10,
+    "p1_pos": 3, "p1_name": 12, "p1_score": 4, "p1_line": 22,
+    "p2_pos": 3, "p2_name": 12, "p2_score": 4, "p2_line": 22,
+    "p3_pos": 3, "p3_name": 12, "p3_score": 4, "p3_line": 22,
+    "p4_line": 22
+  }
+}
